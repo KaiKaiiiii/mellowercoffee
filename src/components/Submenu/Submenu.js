@@ -7,10 +7,22 @@ const Submenu = ({
   setEspresso,
   setTraditional,
   setIceDrip,
-  setHandCraft,
+  sethandcraft,
+  setIceDripGeisha,
+  setIceDripAro,
+  setIceDripEy,
+  setIceDripColom,
+  setIceDripEthi,
+  setIceDripSu,
+  sethandcraftGeisha,
+  sethandcraftAro,
+  sethandcraftEy,
+  sethandcraftColom,
+  sethandcraftEthi,
+  sethandcraftSu,
 }) => {
   return (
-    <div className="text-black absolute top-[calc(100%+2px)] left-0   hidden group-hover:block w-[1125px] bg-white  z-10">
+    <div className="text-black absolute top-[calc(100%+2px)] submenu   hidden group-hover:block w-[1125px] bg-white  z-10">
       <div
         className="pl-44 py-20 flex items-center border-2 border-t-0 border-gray hover  uppercase text-2xl tracking-widest "
         onClick={() => {
@@ -20,7 +32,19 @@ const Submenu = ({
           setEspresso(false);
           setTraditional(false);
           setIceDrip(false);
-          setHandCraft(false);
+          sethandcraft(false);
+          setIceDripGeisha(false);
+          setIceDripAro(false);
+          setIceDripEy(false);
+          setIceDripColom(false);
+          setIceDripEthi(false);
+          setIceDripSu(false);
+          sethandcraftGeisha(false);
+          sethandcraftAro(false);
+          sethandcraftEy(false);
+          sethandcraftColom(false);
+          sethandcraftEthi(false);
+          sethandcraftSu(false);
         }}
       >
         EXPLORE OUR signature & seasonal beverages
@@ -52,7 +76,19 @@ const Submenu = ({
                 setEspresso(false);
                 setTraditional(false);
                 setIceDrip(false);
-                setHandCraft(false);
+                sethandcraft(false);
+                setIceDripGeisha(false);
+                setIceDripAro(false);
+                setIceDripEy(false);
+                setIceDripColom(false);
+                setIceDripEthi(false);
+                setIceDripSu(false);
+                sethandcraftGeisha(false);
+                sethandcraftAro(false);
+                sethandcraftEy(false);
+                sethandcraftColom(false);
+                sethandcraftEthi(false);
+                sethandcraftSu(false);
               }}
             >
               Frappe Coffee
@@ -66,7 +102,19 @@ const Submenu = ({
                 setEspresso(false);
                 setTraditional(false);
                 setIceDrip(true);
-                setHandCraft(false);
+                sethandcraft(false);
+                setIceDripGeisha(false);
+                setIceDripAro(false);
+                setIceDripEy(false);
+                setIceDripColom(false);
+                setIceDripEthi(false);
+                setIceDripSu(false);
+                sethandcraftGeisha(false);
+                sethandcraftAro(false);
+                sethandcraftEy(false);
+                sethandcraftColom(false);
+                sethandcraftEthi(false);
+                sethandcraftSu(false);
               }}
             >
               Ice Drip Coffee
@@ -80,7 +128,19 @@ const Submenu = ({
                 setEspresso(false);
                 setTraditional(false);
                 setIceDrip(false);
-                setHandCraft(false);
+                sethandcraft(false);
+                setIceDripGeisha(false);
+                setIceDripAro(false);
+                setIceDripEy(false);
+                setIceDripColom(false);
+                setIceDripEthi(false);
+                setIceDripSu(false);
+                sethandcraftGeisha(false);
+                sethandcraftAro(false);
+                sethandcraftEy(false);
+                sethandcraftColom(false);
+                sethandcraftEthi(false);
+                sethandcraftSu(false);
               }}
             >
               Whiskey Coffee
@@ -94,10 +154,22 @@ const Submenu = ({
                 setEspresso(false);
                 setTraditional(false);
                 setIceDrip(false);
-                setHandCraft(true);
+                sethandcraft(true);
+                setIceDripGeisha(false);
+                setIceDripAro(false);
+                setIceDripEy(false);
+                setIceDripColom(false);
+                setIceDripEthi(false);
+                setIceDripSu(false);
+                sethandcraftGeisha(false);
+                sethandcraftAro(false);
+                sethandcraftEy(false);
+                sethandcraftColom(false);
+                sethandcraftEthi(false);
+                sethandcraftSu(false);
               }}
             >
-              handrafted Coffee
+              handcrafted Coffee
             </li>
             <li
               className="hover"
@@ -108,7 +180,19 @@ const Submenu = ({
                 setEspresso(true);
                 setTraditional(false);
                 setIceDrip(false);
-                setHandCraft(false);
+                sethandcraft(false);
+                setIceDripGeisha(false);
+                setIceDripAro(false);
+                setIceDripEy(false);
+                setIceDripColom(false);
+                setIceDripEthi(false);
+                setIceDripSu(false);
+                sethandcraftGeisha(false);
+                sethandcraftAro(false);
+                sethandcraftEy(false);
+                sethandcraftColom(false);
+                sethandcraftEthi(false);
+                sethandcraftSu(false);
               }}
             >
               Espresso Based Coffee
@@ -122,7 +206,19 @@ const Submenu = ({
                 setEspresso(false);
                 setTraditional(true);
                 setIceDrip(false);
-                setHandCraft(false);
+                sethandcraft(false);
+                setIceDripGeisha(false);
+                setIceDripAro(false);
+                setIceDripEy(false);
+                setIceDripColom(false);
+                setIceDripEthi(false);
+                setIceDripSu(false);
+                sethandcraftGeisha(false);
+                sethandcraftAro(false);
+                sethandcraftEy(false);
+                sethandcraftColom(false);
+                sethandcraftEthi(false);
+                sethandcraftSu(false);
               }}
             >
               Traditional Vietnamese Coffee
