@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Navigation></Navigation>
-      {/* <Footer></Footer> */}
+      <Footer></Footer> 
     </>
   );
 }
