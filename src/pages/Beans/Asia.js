@@ -1,0 +1,93 @@
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import EyDetailCard from "../../components/BeanDetailCards/EyDetailCard";
+import SuDetailCard from "../../components/BeanDetailCards/SuDetailCard";
+import OrderButton from "../../components/Button/OrderButton";
+
+const Asia = () => {
+  const [eyCard, setEyCard] = useState(false);
+  const [suCard, setSuCard] = useState(false);
+
+  return (
+    <div className="container bean-map">
+      <div className="bg-icedrip_bg w-full h-full  p-20 mx-auto">
+        <ul className="flex items-center gap-7">
+          <NavLink to="/beans/america">
+            <li className="font-medium tracking-tight uppercase underline text-xl 	underline-offset-4 text-gray88 ">
+              America
+            </li>
+          </NavLink>
+          <NavLink to="/beans/africa">
+            <li className="font-medium  tracking-tight uppercase underline text-xl 	underline-offset-4 text-gray88">
+              Africa
+            </li>
+          </NavLink>
+          <NavLink to="/beans/asia">
+            <li className="font-medium active tracking-tight uppercase underline  text-xl	underline-offset-4 text-gray88">
+              Asia
+            </li>
+          </NavLink>
+        </ul>
+        <div className="grid grid-cols-4 gap-14 duration-200 ease-linear">
+          <div className="col-span-2 ">
+            <div className="w-3/4 h-full mx-auto ">
+              <img
+                src="../bean/asia.png"
+                alt=""
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+          <div
+            className="col-span-1 cursor-pointer"
+            onClick={() => {
+              setEyCard(!eyCard);
+              setSuCard(false);
+            }}
+          >
+            {!eyCard ? (
+              <div className="bg-gradient-to-b bg-opacity-70 from-ey_gradient_1 to-ey_gradient_2 p-6 text-white">
+                <img
+                  src="../bean/bean.png"
+                  alt=""
+                  className="w-full mt-48 mx-auto"
+                />
+                <p className="mt-40 font-bold text-2xl uppercase">
+                  ENCHANTING YUNNAN
+                </p>
+                <p className="mt-16">China</p>
+              </div>
+            ) : (
+              <EyDetailCard></EyDetailCard>
+            )}
+          </div>
+          <div
+            className="col-span-1 cursor-pointer"
+            onClick={() => {
+              setSuCard(!suCard);
+              setEyCard(false);
+            }}
+          >
+            {!suCard ? (
+              <div className="bg-gradient-to-b bg-opacity-70 from-su_gradient_1 to-su_gradient_2 p-6 text-white">
+                <img
+                  src="../bean/bean.png"
+                  alt=""
+                  className="w-full mt-48 mx-auto"
+                />
+                <p className="mt-40 font-bold text-2xl uppercase">
+                  SUMATRA MANDHELING
+                </p>
+                <p className="mt-16">Indonesia</p>
+              </div>
+            ) : (
+              <SuDetailCard></SuDetailCard>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Asia;

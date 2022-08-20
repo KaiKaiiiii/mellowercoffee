@@ -1,17 +1,16 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Navigation from "./components/Nav/Navigation.js";
 
 function App() {
-  window.onload = function () {
-    console.log("1");
-  };
   return (
-    <>
+    <div className="container">
       <Navigation></Navigation>
-      <Footer></Footer> 
-    </>
+      <Outlet></Outlet>
+      <Footer></Footer>
+    </div>
   );
 }
 

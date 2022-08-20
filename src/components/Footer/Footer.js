@@ -6,7 +6,7 @@ const Footer = () => {
       <ul className="flex h-full ">
         <li className="px-7 flex flex-col justify-center   ">
           <img
-            src="SVG_ICON/logoM.svg"
+            src="/SVG_ICON/logoM.svg"
             alt=""
             className="w-[117px] h-auto cursor-pointer"
           />
@@ -18,13 +18,13 @@ const Footer = () => {
             href=""
             className="flex items-center justify-center block w-full h-full px-7 "
           >
-            <img src="SVG_ICON/fb.png" alt="" className="w-[34px] h-auto" />
+            <img src="/SVG_ICON/fb.png" alt="" className="w-[34px] h-auto" />
           </a>
           <a
             href=""
             className="flex items-center justify-center block w-full h-full border-t-2 border-gray px-7 "
           >
-            <img src="SVG_ICON/ins.png" alt="" className="w-[34px] h-auto" />
+            <img src="/SVG_ICON/ins.png" alt="" className="w-[34px] h-auto" />
           </a>
         </li>
         <li className=" flex items-center justify-center px-7">
@@ -62,7 +62,7 @@ const Footer = () => {
                 VISIT OUR STORE
               </a>
               <img
-                src="SVG_ICON/arrow.svg"
+                src="/SVG_ICON/arrow.svg"
                 alt=""
                 className="w-auto h-[30px] -rotate-90"
               />
