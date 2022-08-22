@@ -15,6 +15,7 @@ import EYunnanDetail from "./pages/Beans/EYunnanDetail";
 import ColombiaDetail from "./pages/Beans/ColombiaDetail";
 import SumatraDetail from "./pages/Beans/SumatraDetail";
 import EthiopiaDetail from "./pages/Beans/EthiopiaDetail";
+import HomePage from "./pages/HomePage";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -23,6 +24,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App></App>}>
+        <Route path="/" element={<HomePage></HomePage>}></Route>
         <Route path="/beans" element={<Beans></Beans>}></Route>
         <Route path="beans/africa" element={<Africa></Africa>}></Route>
         <Route path="beans/america" element={<America></America>}></Route>
