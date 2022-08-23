@@ -1,8 +1,9 @@
 import React from "react";
 import SuDetailCard from "../BeanDetailCards/SuDetailCard";
+import ExitButton from "../Button/ExitButton";
 import OrderButton from "../Button/OrderButton";
 
-const HandcraftSu = ({ handcraftSu }) => {
+const HandcraftSu = ({ handcraftSu, sethandcraftSu }) => {
   return (
     <div
       className={`w-full  border-gray inset-0 relative h-full  ${
@@ -11,7 +12,9 @@ const HandcraftSu = ({ handcraftSu }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2">
+      <ExitButton onClick={() => sethandcraftSu(!handcraftSu)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-l-0  border-t-0 border-r-2">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           CAFFEINE
         </span>

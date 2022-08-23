@@ -1,7 +1,8 @@
 import React from "react";
 import EthiDetailCard from "../BeanDetailCards/EthiDetailCard";
+import ExitButton from "../Button/ExitButton";
 import OrderButton from "../Button/OrderButton";
-const HandcraftEthi = ({ handcraftEthi }) => {
+const HandcraftEthi = ({ handcraftEthi, sethandcraftEthi }) => {
   return (
     <div
       className={`w-full  border-gray inset-0 relative h-full  ${
@@ -10,7 +11,9 @@ const HandcraftEthi = ({ handcraftEthi }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2">
+      <ExitButton onClick={() => sethandcraftEthi(!handcraftEthi)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-l-0   border-t-0 border-r-2">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           CAFFEINE
         </span>

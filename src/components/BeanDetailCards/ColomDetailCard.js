@@ -3,7 +3,7 @@ import OrderButton from "../Button/OrderButton";
 
 const ColomDetailCard = () => {
   return (
-    <div className=" col-span-1 text-white flex flex-col relative border-r-2 border-gray ">
+    <div className=" col-span-1 text-white flex flex-col relative  border-gray ">
       <div className="absolute inset-0  bg-gradient-to-b from-colom_gradient_1 to-colom_gradient_2 z-0"></div>
       <div className="grow pt-8 pb-16 px-5 text-lg flex flex-col  z-10">
         <h2 className="uppercase text-3xl  font-bold pb-3 border-b-2 border-white">

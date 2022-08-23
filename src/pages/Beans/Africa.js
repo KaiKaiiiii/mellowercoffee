@@ -8,7 +8,7 @@ const Africa = () => {
   const [aroCard, setAroCard] = useState(false);
   const [ethiCard, setEthiCard] = useState(false);
   return (
-    <div className="container bean-map">
+    <div className="container bean-map ">
       <div className="bg-icedrip_bg w-full h-full  p-20 mx-auto">
         <ul className="flex items-center gap-7">
           <NavLink to="/beans/america">

@@ -50,6 +50,9 @@ code {
 .submenu {
   left: -1px;
 }
+.submenu-beans {
+  left: -0.5px;
+}
 
 nav li,
 footer li {
@@ -210,6 +213,10 @@ footer li:last-child,
   100% {
     transform: translateX(200%);
   }
+}
+
+.bean-map {
+  margin-top: 100px;
 }
 
 .bean-map .active {

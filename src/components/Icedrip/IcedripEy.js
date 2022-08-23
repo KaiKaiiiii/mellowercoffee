@@ -1,8 +1,9 @@
 import React from "react";
 import EyDetailCard from "../BeanDetailCards/EyDetailCard";
+import ExitButton from "../Button/ExitButton";
 import OrderButton from "../Button/OrderButton";
 
-const IcedripEy = ({ iceDripEy }) => {
+const IcedripEy = ({ iceDripEy, setIceDripEy }) => {
   return (
     <div
       className={`w-full  border-gray inset-0 relative h-full  ${
@@ -11,7 +12,9 @@ const IcedripEy = ({ iceDripEy }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2">
+      <ExitButton onClick={() => setIceDripEy(!iceDripEy)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2 border-l-0">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           CAFFEINE
         </span>
@@ -42,7 +45,7 @@ const IcedripEy = ({ iceDripEy }) => {
               </div>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-12 border-2 border-l-0  border-gray `}
             >
               <div className="w-80 ">
                 <img
@@ -58,7 +61,7 @@ const IcedripEy = ({ iceDripEy }) => {
               <OrderButton btnColor="ey"></OrderButton>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-12 border-2 border-l-0  border-gray `}
             >
               <div className="w-52 ">
                 <img
@@ -74,7 +77,7 @@ const IcedripEy = ({ iceDripEy }) => {
               <OrderButton btnColor="ey"></OrderButton>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-12 border-2 border-l-0  border-gray `}
             >
               <div className="w-52 ">
                 <img

@@ -2,7 +2,7 @@ import React from "react";
 
 const AromaticDetail = () => {
   return (
-    <div className="bg-icedrip_bg w-full">
+    <div className="bg-icedrip_bg w-full mt-100">
       <div className="mx-auto  w-full text-center py-16 uppercase">
         <h1 className="text-7xl font-bold ">AROMATIC SHADOW</h1>
         <p className="text-3xl font-medium mt-2">FINDER SERIES</p>

@@ -16,6 +16,7 @@ import HandcraftEy from "../Handcraft/HandcraftEy";
 import HandcraftAro from "../Handcraft/HandcraftAro";
 import HandcraftEthi from "../Handcraft/HandcraftEthi";
 import HandcraftSu from "../Handcraft/HandcraftSu";
+import ExitButton from "../Button/ExitButton";
 
 const Navigation = () => {
   const [signature, setSignature] = useState(false);
@@ -39,9 +40,9 @@ const Navigation = () => {
   const [handcraftSu, sethandcraftSu] = useState(false);
 
   return (
-    <nav className="relative top-0 left-0 right-0 ">
-      <ul className="flex border-b-2 border-t-2 border-gray">
-        <li className="px-7 py-9">
+    <nav className=" fixed z-50 bg-white top-0 left-0 right-0 ">
+      <ul className="flex   border-t-2 border-gray">
+        <li className="px-7 border-b-2 py-9">
           <Link to="/">
             <img
               src="/SVG_ICON/logoMellowercoffee.svg"
@@ -100,7 +101,7 @@ const Navigation = () => {
           ></Submenu>
         </ElementFather>
 
-        <li className="px-5 flex items-center justify-center w-[388px]">
+        <li className="px-5 border-b-2 flex items-center justify-center w-[388px]">
           <img
             src="/SVG_ICON/search.svg"
             alt="search-icon"
@@ -120,17 +121,22 @@ const Navigation = () => {
 
         <ElementFather desc="About us"></ElementFather>
 
-        <li className="px-5 flex flex-1 items-center justify-end">
-          <p className="font-extrabold text-right tracking-widest ml-auto  break-words inline-block">
-            INTERNATIONAL SPECIALTY COFFEE CHAIN
-          </p>
+        <li className="px-5 border-b-2 leading-3 flex flex-col flex-1 items-end justify-center font-extrabold text-right tracking-widest ml-auto  break-words inline-block">
+          <p className="">INTERNATIONAL</p>
+          <br />
+          <p> SPECIALTY COFFEE</p>
+          <br />
+          <p>CHAIN</p>
         </li>
       </ul>
-      <Signature signature={signature}></Signature>
-      <Frappe frappe={frappe}></Frappe>
-      <Whiskey whiskey={whiskey}></Whiskey>
-      <Espresso espresso={espresso}></Espresso>
-      <Traditional traditional={traditional}></Traditional>
+      <Signature signature={signature} setSignature={setSignature}></Signature>
+      <Frappe frappe={frappe} setFrappe={setFrappe}></Frappe>
+      <Whiskey whiskey={whiskey} setWhiskey={setWhiskey}></Whiskey>
+      <Espresso espresso={espresso} setEspresso={setEspresso}></Espresso>
+      <Traditional
+        traditional={traditional}
+        setTraditional={setTraditional}
+      ></Traditional>
       <Icedrip
         iceDrip={iceDrip}
         setIceDripGeisha={setIceDripGeisha}
@@ -153,12 +159,24 @@ const Navigation = () => {
         sethandcraftEthi={sethandcraftEthi}
         sethandcraftSu={sethandcraftSu}
       ></Icedrip>
-      <IcedripGeisha iceDripGeisha={iceDripGeisha}></IcedripGeisha>
-      <IcedripAro iceDripAro={iceDripAro}></IcedripAro>
-      <IcedripEthi iceDripEthi={iceDripEthi}></IcedripEthi>
-      <IcedripSu iceDripSu={iceDripSu}></IcedripSu>
-      <IcedripColom iceDripColom={iceDripColom}></IcedripColom>
-      <IcedripEy iceDripEy={iceDripEy}></IcedripEy>
+      <IcedripGeisha
+        iceDripGeisha={iceDripGeisha}
+        setIceDripGeisha={setIceDripGeisha}
+      ></IcedripGeisha>
+      <IcedripAro
+        iceDripAro={iceDripAro}
+        setIceDripAro={setIceDripAro}
+      ></IcedripAro>
+      <IcedripEthi
+        iceDripEthi={iceDripEthi}
+        setIceDripEthi={setIceDripEthi}
+      ></IcedripEthi>
+      <IcedripSu iceDripSu={iceDripSu} setIceDripSu={setIceDripSu}></IcedripSu>
+      <IcedripColom
+        iceDripColom={iceDripColom}
+        setIceDripColom={setIceDripColom}
+      ></IcedripColom>
+      <IcedripEy iceDripEy={iceDripEy} setIceDripEy={setIceDripEy}></IcedripEy>
       <Handcraft
         handcraft={handcraft}
         setIceDripGeisha={setIceDripGeisha}
@@ -181,12 +199,30 @@ const Navigation = () => {
         sethandcraftEthi={sethandcraftEthi}
         sethandcraftSu={sethandcraftSu}
       ></Handcraft>
-      <HandcraftGeisha handcraftGeisha={handcraftGeisha}></HandcraftGeisha>
-      <HandcraftAro handcraftAro={handcraftAro}></HandcraftAro>
-      <HandcraftEthi handcraftEthi={handcraftEthi}></HandcraftEthi>
-      <HandcraftSu handcraftSu={handcraftSu}></HandcraftSu>
-      <HandcraftColom handcraftColom={handcraftColom}></HandcraftColom>
-      <HandcraftEy handcraftEy={handcraftEy}></HandcraftEy>
+      <HandcraftGeisha
+        handcraftGeisha={handcraftGeisha}
+        sethandcraftGeisha={sethandcraftGeisha}
+      ></HandcraftGeisha>
+      <HandcraftAro
+        handcraftAro={handcraftAro}
+        sethandcraftAro={sethandcraftAro}
+      ></HandcraftAro>
+      <HandcraftEthi
+        handcraftEthi={handcraftEthi}
+        sethandcraftEthi={sethandcraftEthi}
+      ></HandcraftEthi>
+      <HandcraftSu
+        handcraftSu={handcraftSu}
+        sethandcraftSu={sethandcraftSu}
+      ></HandcraftSu>
+      <HandcraftColom
+        handcraftColom={handcraftColom}
+        sethandcraftColom={sethandcraftColom}
+      ></HandcraftColom>
+      <HandcraftEy
+        handcraftEy={handcraftEy}
+        sethandcraftEy={sethandcraftEy}
+      ></HandcraftEy>
     </nav>
   );
 };
@@ -196,7 +232,7 @@ export default Navigation;
 const ElementFather = ({ desc, children }) => {
   return (
     <li
-      className={`relative flex flex-col items-center justify-center  px-4 cursor-pointer group hover hover:fill-white`}
+      className={`relative flex flex-col border-b-2 items-center justify-center  px-4 cursor-pointer group hover `}
     >
       <p className="text-sm uppercase tracking-widest pt-4">{desc}</p>
       {/* <img
@@ -218,15 +254,17 @@ const ElementFather = ({ desc, children }) => {
   );
 };
 
-const Signature = ({ signature }) => {
+const Signature = ({ signature, setSignature }) => {
   return (
     <div
-      className={`w-full border-2 border-t-0 border-gray inset-0 relative h-full max-h-[620px] ${
+      className={`w-full   border-gray inset-0  relative h-full max-h-[620px] ${
         signature
-          ? "flex translate-x-0 visible"
+          ? "flex translate-x-0 visible !fixed bg-white top-[100px] z-20"
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
+      <ExitButton onClick={() => setSignature(!signature)}></ExitButton>
+
       <div className=" border-r-2 border-gray  flex items-baseline pt-44 justify-center ">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           BEVERAGES
@@ -236,6 +274,7 @@ const Signature = ({ signature }) => {
         <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl border-r-2  border-gray ">
           signature
         </h2>
+
         <div className="flex h-full items-stretch justify-center max-h-[540px] ">
           <div
             className={`bg-saigon  flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
@@ -331,7 +370,7 @@ const Signature = ({ signature }) => {
   );
 };
 
-const Frappe = ({ frappe }) => {
+const Frappe = ({ frappe, setFrappe }) => {
   return (
     <div
       className={`w-full  border-gray inset-0 relative h-full max-h-[620px]  ${
@@ -340,13 +379,15 @@ const Frappe = ({ frappe }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-t-0 ">
+      <ExitButton onClick={() => setFrappe(!frappe)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-t-0  border-l-0">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest border-t-0  max-w-[150px]  ">
           CAFFEINE
         </span>
       </div>
       <div className="w-full">
-        <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl border-r-2 border-gray ">
+        <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl  border-gray ">
           frappe Coffee
         </h2>
         <div className="flex justify-center max-h-[540px] ">
@@ -383,7 +424,7 @@ const Frappe = ({ frappe }) => {
             <OrderButton></OrderButton>
           </div>
           <div
-            className={`bg-mochaFrappe grow px-7 flex flex-col items-center justify-end py-14 border-2  border-gray `}
+            className={`bg-mochaFrappe border-r-0 grow px-7 flex flex-col items-center justify-end py-14 border-2  border-gray `}
           >
             <div className="w-52 ">
               <img
@@ -404,7 +445,7 @@ const Frappe = ({ frappe }) => {
   );
 };
 
-const Whiskey = ({ whiskey }) => {
+const Whiskey = ({ whiskey, setWhiskey }) => {
   return (
     <div
       className={`w-full  border-gray inset-0 relative h-full max-h-[620px] ${
@@ -413,13 +454,15 @@ const Whiskey = ({ whiskey }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-t-0 border-r-2">
+      <ExitButton onClick={() => setWhiskey(!whiskey)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-t-0  border-l-0 border-r-2">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           CAFFEINE
         </span>
       </div>
       <div className="w-full">
-        <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl border-2 border-b-0 border-t-0 border-l-0 border-gray ">
+        <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl  ">
           whiskey coffee
         </h2>
         <div className="grid grid-cols-2 max-h-[540px] ">
@@ -440,7 +483,7 @@ const Whiskey = ({ whiskey }) => {
             <OrderButton></OrderButton>
           </div>
           <div
-            className={`bg-wildBerryWhiskey grow py-[50px] flex flex-col items-center justify-end py-14 border-2  border-l-0 border-gray `}
+            className={`bg-wildBerryWhiskey grow py-[50px] flex flex-col items-center justify-end border-2 border-r-0  border-l-0 border-gray `}
           >
             <div className="w-52 ">
               <img
@@ -463,7 +506,7 @@ const Whiskey = ({ whiskey }) => {
   );
 };
 
-const Espresso = ({ espresso }) => {
+const Espresso = ({ espresso, setEspresso }) => {
   return (
     <div
       className={`w-full  border-gray inset-0 relative h-full  ${
@@ -472,16 +515,18 @@ const Espresso = ({ espresso }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2">
+      <ExitButton onClick={() => setEspresso(!espresso)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2 border-l-0">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           CAFFEINE
         </span>
       </div>
       <div className="w-full ">
-        <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl border-2 border-b-0 border-t-0  border-l-0 border-gray ">
+        <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl  ">
           espresso based coffee
         </h2>
-        <div className="grid grid-cols-3  ">
+        <div className="grid grid-cols-3 overflow-y-scroll max-h-[80vh] ">
           <div
             className={`bg-soloEspresso grow  flex py-[50px] flex-col items-center justify-end py-14 border-2 border-l-0 border-b-0  border-gray `}
           >
@@ -680,7 +725,7 @@ const Espresso = ({ espresso }) => {
   );
 };
 
-const Traditional = ({ traditional }) => {
+const Traditional = ({ traditional, setTraditional }) => {
   return (
     <div
       className={`w-full  border-gray inset-0 relative h-full  ${
@@ -689,7 +734,9 @@ const Traditional = ({ traditional }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-t-0  ">
+      <ExitButton onClick={() => setTraditional(!traditional)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-t-0  border-l-0 ">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           CAFFEINE
         </span>
@@ -698,7 +745,7 @@ const Traditional = ({ traditional }) => {
         <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl border-2 border-b-0 border-t-0  border-l-0 border-gray ">
           traditional vietnamese coffee
         </h2>
-        <div className="grid grid-cols-3  ">
+        <div className="grid grid-cols-3 overflow-y-scroll max-h-[80vh] ">
           <div
             className={`bg-cfTrung grow  flex py-[50px] flex-col items-center justify-end py-14 border-2 border-l-0 border-b-0  border-gray `}
           >

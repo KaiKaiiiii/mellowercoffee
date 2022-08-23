@@ -25,7 +25,7 @@ const Submenu = ({
 }) => {
   if (beverages) {
     return (
-      <div className="z-99 text-black absolute top-[calc(100%+2px)] submenu   hidden group-hover:block w-[1084px] bg-white  z-10">
+      <div className="z-50 text-black absolute top-[calc(100%+1px)] submenu   hidden group-hover:block w-[1084px] bg-white  ">
         <div
           className="pl-44 py-16 flex items-center border-2 border-t-0 border-gray hover  uppercase text-2xl tracking-widest "
           onClick={() => {
@@ -245,7 +245,7 @@ const Submenu = ({
     );
   } else {
     return (
-      <div className="z-99 text-black flex max-h-[620px] flex-col absolute top-[calc(100%+2px)] submenu   hidden group-hover:block w-[965px] bg-white  z-10">
+      <div className="z-50 text-black flex max-h-[620px] flex-col absolute top-[calc(100%+1px)] submenu-beans   hidden group-hover:block w-[965px] bg-white  ">
         <Link to="/beans">
           <div
             className="pl-14 py-16 flex items-center border-2 border-t-0 border-gray hover  uppercase text-2xl tracking-widest "
@@ -284,9 +284,9 @@ const Submenu = ({
           </div>
         </Link>
 
-        <ul className="w-full h-full  grow text-lg grid grid-cols-3 grid-rows-2 beans border-2 border-gray border-t-0">
+        <ul className="w-full h-full  grow text-lg grid grid-cols-3 grid-rows-2 beans ">
           <Link to="/beans/geisha">
-            <li className="hover-geisha !border-r-2">
+            <li className="hover-geisha !border-r-2 border-l-2">
               <span>Flame of</span>
               <br />
               <span>geisha</span>
@@ -300,26 +300,26 @@ const Submenu = ({
             </li>
           </Link>
           <Link to="/beans/eyunnan">
-            <li className="hover-ey">
+            <li className="hover-ey border-r-2">
               <span>enchanting</span>
               <br />
               <span>Yunnan</span>
             </li>
           </Link>
           <Link to="/beans/colombia">
-            <li className="hover-colom !border-r-2 !border-b-0 h-full">
+            <li className="hover-colom !border-2 !border-t-0  h-full">
               Colombia
             </li>
           </Link>
           <Link to="/beans/ethiopia">
-            <li className="hover-ethi !border-r-2 !border-b-0">
+            <li className="hover-ethi !border-r-2 ">
               <span>Ethiopia</span>
               <br />
               <span>Yirgacheffe</span>
             </li>
           </Link>
           <Link to="/beans/sumatra">
-            <li className="hover-su !border-b-0">
+            <li className="hover-su  !border-r-2">
               <span>Sumatra</span>
               <br />
               <span>Mandheling</span>

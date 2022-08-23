@@ -1,8 +1,13 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [cupLeft, setCupLeft] = useState(0);
+  const [america, setAmerica] = useState(false);
+  const [africa, setAfrica] = useState(false);
+  const [asia, setAsia] = useState(false);
+  const [videoStopped, setVideoStopped] = useState(false);
 
   function onMouseDown(event) {
     const slider = document.querySelector("#slider");
@@ -36,10 +41,9 @@ const HomePage = () => {
     }
   }
 
-  // console.log(cupLeft);
   return (
-    <div className="">
-      <div className="p-32 bg-hover">
+    <div className="mt-100">
+      <div className="p-32 pb-8 bg-hover">
         <div className="mx-auto  w-full text-center pb-32 tracking-widest ">
           <h1 className="text-7xl font-medium  ">How many flavors are</h1>
           <br />
@@ -179,6 +183,139 @@ const HomePage = () => {
               className=" h-full object-contain"
             />
           </div>
+        </div>
+        <div className="text-center flex flex-col items-center">
+          <p className="text-2xl font-medium mt-14 ">
+            over 100 flavors to explore
+          </p>
+          <img src="/SVG_ICON/arrowblack.png" alt="" className="w-8 mt-4" />
+        </div>
+      </div>
+      <div className="py-20">
+        <div className="tracking-widest font-medium text-5xl text-center leading-6">
+          <h2 className="">The growing region</h2>
+          <br />
+          <h2 className="">can affect specific flavors</h2>
+          <br />
+          <h2 className="">and characteristics of the coffee.</h2>
+        </div>
+        <p className="text-2xl font-medium mt-10 tracking-widest text-center">
+          choose the origin you want to visit
+        </p>
+        <img src="/bean/plane.png" alt="" className="mt-16 mx-auto w-16" />
+      </div>
+      <div className="bg-beanspage_bg  w-full h-full relative overflow-hidden">
+        <div className=" w-full h-full  translate-x-32">
+          <img
+            src={
+              america
+                ? "bean/mapame.png "
+                : africa
+                ? "bean/mapafrica.png "
+                : asia
+                ? "bean/mapasia.png "
+                : "bean/map.png "
+            }
+            alt=""
+            className="w-11/12 h-full  object-cover "
+          />
+        </div>
+        <Link to="beans/america">
+          <span
+            onMouseEnter={() => {
+              setAmerica(true);
+              setAfrica(false);
+              setAsia(false);
+            }}
+            className="absolute america translate-x-[38vw] -translate-y-[35vh] z-[1] font-medium tracking-tight uppercase underline 	underline-offset-4"
+          >
+            America
+          </span>
+        </Link>
+        <Link to="beans/africa">
+          <span
+            onMouseEnter={() => {
+              setAmerica(false);
+              setAfrica(true);
+              setAsia(false);
+            }}
+            className="absolute africa translate-x-[63vw] -translate-y-[20vh] z-[1] font-medium tracking-tight uppercase underline 	underline-offset-4"
+          >
+            Africa
+          </span>
+        </Link>
+        <Link to="beans/asia">
+          <span
+            onMouseEnter={() => {
+              setAmerica(false);
+              setAfrica(false);
+              setAsia(true);
+            }}
+            className="absolute asia translate-x-[83vw] -translate-y-[48vh] z-[1] font-medium tracking-tight uppercase underline 	underline-offset-4"
+          >
+            Asia
+          </span>
+        </Link>
+        <div className="w-auto absolute  -translate-y-[150%] ml-8">
+          <img
+            src="bean/bean.png"
+            alt=""
+            className="w-1/2 h-full object-cover"
+          />
+        </div>
+      </div>
+      <div className="py-20">
+        <div className="tracking-widest font-medium text-5xl text-center leading-6">
+          <h2 className="">Enjoy fascinating coffee flavors</h2>
+          <br />
+          <h2 className="">all over the world</h2>
+          <br />
+          <h2 className=""> just at Mellower Coffee now!</h2>
+        </div>
+
+        <img src="/SVG_ICON/star.png" alt="" className="mt-16 mx-auto w-16" />
+      </div>
+      <div className="relative">
+        <video
+          width="100%"
+          height="780"
+          controls
+          autoPlay
+          muted
+          loop
+          onClick={() => {
+            setVideoStopped(!videoStopped);
+          }}
+        >
+          <source src="/video/MT_video.mp4" type="video/mp4" />
+        </video>
+
+        {videoStopped && (
+          <div
+            className={`absolute inset-0 bg-black bg-opacity-20  flex items-center justify-center pointer-events-none`}
+          >
+            <img
+              src="/SVG_ICON/play.png"
+              alt=""
+              className="w-40 cursor-pointer"
+            ></img>
+          </div>
+        )}
+      </div>
+      <div className="py-20 pb-56">
+        <div className="tracking-widest font-medium text-5xl text-center leading-6 pb-20">
+          <h2 className="">What are you waiting for?</h2>
+        </div>
+        <div className="grid grid-cols-2 text-4xl tracking-widest border-y-2 border-gray">
+          <button
+            type="button"
+            className="text-center border-r-2 border-gray py-20 hover"
+          >
+            Visit the nearest store
+          </button>
+          <button type="button" className="text-center  py-20 hover">
+            Order now
+          </button>
         </div>
       </div>
     </div>

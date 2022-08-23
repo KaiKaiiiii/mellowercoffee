@@ -1,8 +1,9 @@
 import React from "react";
 import SuDetailCard from "../BeanDetailCards/SuDetailCard";
+import ExitButton from "../Button/ExitButton";
 import OrderButton from "../Button/OrderButton";
 
-const IcedripSu = ({ iceDripSu }) => {
+const IcedripSu = ({ iceDripSu, setIceDripSu }) => {
   return (
     <div
       className={`w-full  border-gray inset-0 relative h-full  ${
@@ -11,7 +12,9 @@ const IcedripSu = ({ iceDripSu }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2">
+      <ExitButton onClick={() => setIceDripSu(!iceDripSu)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2 border-l-0">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           CAFFEINE
         </span>

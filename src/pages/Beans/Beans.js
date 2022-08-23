@@ -5,14 +5,10 @@ const Beans = () => {
   const [america, setAmerica] = useState(false);
   const [africa, setAfrica] = useState(false);
   const [asia, setAsia] = useState(false);
-  console.log({
-    america,
-    africa,
-    asia,
-  });
+
   return (
     <div className="container ">
-      <div className="bg-beanspage_bg  w-full h-full relative overflow-hidden">
+      <div className="bg-beanspage_bg  w-full h-full relative overflow-hidden mt-100">
         <div className=" w-full h-full  translate-x-32">
           <img
             src={

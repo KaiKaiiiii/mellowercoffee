@@ -1,4 +1,5 @@
 import React from "react";
+import ExitButton from "../Button/ExitButton";
 
 const Handcraft = ({
   handcraft,
@@ -30,13 +31,15 @@ const Handcraft = ({
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2">
+      <ExitButton onClick={() => sethandcraft(!handcraft)}></ExitButton>
+
+      <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-l-0 border-t-0 border-r-2">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
           CAFFEINE
         </span>
       </div>
       <div className="w-full ">
-        <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl border-2 border-t-0 border-b-0  border-l-0 border-gray ">
+        <h2 className="uppercase tracking-widest pl-12 py-6 text-2xl  ">
           handcrafted coffee
         </h2>
         <div className="grid grid-cols-3  ">
@@ -118,7 +121,7 @@ const Handcraft = ({
               sethandcraftEthi(false);
               sethandcraftSu(false);
             }}
-            className={`bg-gradient-to-b cursor-pointer from-ethi_gradient_1 to-ey_gradient_2  py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
+            className={`bg-gradient-to-b cursor-pointer from-ethi_gradient_1 to-ey_gradient_2 border-r-0 py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
           >
             <p className="tracking-widest text-2xl uppercase text-white">
               enchanting Yunnan
@@ -202,7 +205,7 @@ const Handcraft = ({
               sethandcraftEthi(false);
               sethandcraftSu(true);
             }}
-            className={`bg-gradient-to-b cursor-pointer from-su_gradient_1 to-su_gradient_2  py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
+            className={`bg-gradient-to-b cursor-pointer from-su_gradient_1 to-su_gradient_2 border-r-0 py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
           >
             <p className="tracking-widest text-2xl uppercase text-white">
               Sumatra Mandheling
