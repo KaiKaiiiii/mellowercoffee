@@ -9,6 +9,12 @@ module.exports = {
       borderWidth: {
         2: "1px",
       },
+      margin: {
+        100: "100px",
+      },
+      width: {
+        52: "11rem",
+      },
       colors: {
         gray: "#958B8B",
         gray88: "#888888",
