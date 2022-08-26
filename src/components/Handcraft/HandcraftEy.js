@@ -12,7 +12,10 @@ const HandcraftEy = ({ handcraftEy, sethandcraftEy }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <ExitButton onClick={() => sethandcraftEy(!handcraftEy)}></ExitButton>
+      <ExitButton
+        detail
+        onClick={() => sethandcraftEy(!handcraftEy)}
+      ></ExitButton>
 
       <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center border-l-0  border-t-0 border-r-2">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">

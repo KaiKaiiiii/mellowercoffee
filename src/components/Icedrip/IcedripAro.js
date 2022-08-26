@@ -12,7 +12,10 @@ const IcedripAro = ({ iceDripAro, setIceDripAro }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <ExitButton onClick={() => setIceDripAro(!iceDripAro)}></ExitButton>
+      <ExitButton
+        detail
+        onClick={() => setIceDripAro(!iceDripAro)}
+      ></ExitButton>
 
       <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2 border-l-0">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
@@ -94,7 +97,7 @@ const IcedripAro = ({ iceDripAro, setIceDripAro }) => {
             </div>
           </div>
         </div>
-        <AroDetailCard></AroDetailCard>
+        <AroDetailCard setIceDripAro={setIceDripAro}></AroDetailCard>
       </div>
     </div>
   );

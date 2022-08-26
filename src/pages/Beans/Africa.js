@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import AroDetailCard from "../../components/BeanDetailCards/AroDetailCard";
 import EthiDetailCard from "../../components/BeanDetailCards/EthiDetailCard";
 import OrderButton from "../../components/Button/OrderButton";
 
 const Africa = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const [aroCard, setAroCard] = useState(false);
   const [ethiCard, setEthiCard] = useState(false);
   return (
@@ -29,11 +36,11 @@ const Africa = () => {
         </ul>
         <div className="grid grid-cols-4 gap-14 duration-200 ease-linear">
           <div className="col-span-2 ">
-            <div className="w-3/4 h-full mx-auto max-w-md ">
+            <div className="w-2/4 h-full mx-auto  max-w-md ">
               <img
                 src="../bean/africa.png"
                 alt=""
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain mix-blend-multiply	"
               />
             </div>
           </div>

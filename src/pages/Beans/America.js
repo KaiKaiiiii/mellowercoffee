@@ -3,10 +3,15 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ColomDetailCard from "../../components/BeanDetailCards/ColomDetailCard";
 import GeishaDetailCard from "../../components/BeanDetailCards/GeishaDetailCard";
-import OrderButton from "../../components/Button/OrderButton";
-import ColombiaDetail from "./ColombiaDetail";
 
 const America = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const [geishaCard, setGeishaCard] = useState(false);
   const [colomCard, setColomCard] = useState(false);
   useEffect(() => {

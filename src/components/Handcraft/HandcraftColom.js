@@ -13,6 +13,7 @@ const HandcraftColom = ({ handcraftColom, sethandcraftColom }) => {
       }  duration-200 ease-linear `}
     >
       <ExitButton
+        detail
         onClick={() => sethandcraftColom(!handcraftColom)}
       ></ExitButton>
 

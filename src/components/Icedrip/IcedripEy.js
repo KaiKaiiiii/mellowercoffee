@@ -12,7 +12,7 @@ const IcedripEy = ({ iceDripEy, setIceDripEy }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <ExitButton onClick={() => setIceDripEy(!iceDripEy)}></ExitButton>
+      <ExitButton detail onClick={() => setIceDripEy(!iceDripEy)}></ExitButton>
 
       <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2 border-l-0">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">

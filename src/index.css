@@ -293,3 +293,18 @@ footer li:last-child,
 .notes.active {
   width: calc(100% / 15);
 }
+
+.cup-move-arrow {
+  animation: cup-move 1000ms linear infinite;
+}
+
+@keyframes cup-move {
+  0% {
+    opacity: 1;
+    transform: rotate(90deg) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-200%);
+  }
+}

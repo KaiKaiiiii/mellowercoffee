@@ -1,7 +1,7 @@
 import React from "react";
 import OrderButton from "../Button/OrderButton";
 
-const AroDetailCard = () => {
+const AroDetailCard = ({ setIceDripAro, sethandcraftAro }) => {
   return (
     <div className=" col-span-1 text-white flex flex-col relative  border-gray ">
       <div className="absolute inset-0  bg-gradient-to-b from-aro_gradient_1 to-aro_gradient_2 z-0"></div>
@@ -27,7 +27,14 @@ const AroDetailCard = () => {
           <li>Medium Body</li>
           <li>Round Mouthfeel</li>
         </ul>
-        <OrderButton btnColor="aro" content="View More"></OrderButton>
+        <OrderButton
+          btnColor="aro"
+          content="View More"
+          onClick={() => {
+            sethandcraftAro(false);
+            setIceDripAro(false);
+          }}
+        ></OrderButton>
       </div>
       <div className="w-full max-h-20 z-10">
         <img

@@ -44,7 +44,7 @@ const Handcraft = ({
         </h2>
         <div className="grid grid-cols-3  ">
           <div
-            className={`bg-gradient-to-b cursor-pointer from-geisha_gradient_1 to-geisha_gradient_2 opacity-70 py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
+            className={`text-black hover:text-white hover:bg-gradient-to-b cursor-pointer hover:from-geisha_gradient_1 hover:to-geisha_gradient_2 bg-opacity-70 py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
             onClick={() => {
               setIceDripGeisha(false);
               setIceDripAro(false);
@@ -67,7 +67,7 @@ const Handcraft = ({
               sethandcraftSu(false);
             }}
           >
-            <p className="tracking-widest text-2xl uppercase text-white">
+            <p className="tracking-widest text-2xl uppercase ">
               Flame of geisha
             </p>
           </div>
@@ -93,9 +93,9 @@ const Handcraft = ({
               sethandcraftEthi(false);
               sethandcraftSu(false);
             }}
-            className={`bg-gradient-to-b cursor-pointer from-aro_gradient_1 to-aro_gradient_2  py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
+            className={`text-black hover:text-white hover:bg-gradient-to-b cursor-pointer hover:from-aro_gradient_1 hover:to-aro_gradient_2  py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
           >
-            <p className="tracking-widest text-2xl uppercase text-white">
+            <p className="tracking-widest text-2xl uppercase ">
               Aromatic Shadow
             </p>
           </div>
@@ -121,9 +121,9 @@ const Handcraft = ({
               sethandcraftEthi(false);
               sethandcraftSu(false);
             }}
-            className={`bg-gradient-to-b cursor-pointer from-ethi_gradient_1 to-ey_gradient_2 border-r-0 py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
+            className={`text-black hover:text-white hover:bg-gradient-to-b cursor-pointer hover:from-ethi_gradient_1 hover:to-ey_gradient_2 border-r-0 py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
           >
-            <p className="tracking-widest text-2xl uppercase text-white">
+            <p className="tracking-widest text-2xl uppercase ">
               enchanting Yunnan
             </p>
           </div>
@@ -149,11 +149,9 @@ const Handcraft = ({
               sethandcraftEthi(false);
               sethandcraftSu(false);
             }}
-            className={`bg-gradient-to-b cursor-pointer from-colom_gradient_1 to-colom_gradient_2  py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
+            className={`text-black hover:text-white hover:bg-gradient-to-b cursor-pointer hover:from-colom_gradient_1 hover:to-colom_gradient_2  py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
           >
-            <p className="tracking-widest text-2xl uppercase text-white">
-              Colombia
-            </p>
+            <p className="tracking-widest text-2xl uppercase ">Colombia</p>
           </div>
           <div
             onClick={() => {
@@ -177,9 +175,9 @@ const Handcraft = ({
               sethandcraftEthi(true);
               sethandcraftSu(false);
             }}
-            className={`bg-gradient-to-b cursor-pointer from-ethi_gradient_1 to-ethi_gradient_2  py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
+            className={`text-black hover:text-white hover:bg-gradient-to-b cursor-pointer hover:from-ethi_gradient_1 hover:to-ethi_gradient_2  py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
           >
-            <p className="tracking-widest text-2xl uppercase text-white">
+            <p className="tracking-widest text-2xl uppercase ">
               Ethiopia Yirgacheffe
             </p>
           </div>
@@ -205,9 +203,9 @@ const Handcraft = ({
               sethandcraftEthi(false);
               sethandcraftSu(true);
             }}
-            className={`bg-gradient-to-b cursor-pointer from-su_gradient_1 to-su_gradient_2 border-r-0 py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
+            className={`text-black hover:text-white hover:bg-gradient-to-b cursor-pointer hover:from-su_gradient_1 hover:to-su_gradient_2 border-r-0 py-32 grow  flex  items-center pl-10 border-2 border-l-0 border-b-0  border-gray `}
           >
-            <p className="tracking-widest text-2xl uppercase text-white">
+            <p className="tracking-widest text-2xl uppercase ">
               Sumatra Mandheling
             </p>
           </div>

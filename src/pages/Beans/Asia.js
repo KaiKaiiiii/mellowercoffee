@@ -5,6 +5,13 @@ import SuDetailCard from "../../components/BeanDetailCards/SuDetailCard";
 import OrderButton from "../../components/Button/OrderButton";
 
 const Asia = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   const [eyCard, setEyCard] = useState(false);
   const [suCard, setSuCard] = useState(false);
 
@@ -30,11 +37,11 @@ const Asia = () => {
         </ul>
         <div className="grid grid-cols-4 gap-14 duration-200 ease-linear">
           <div className="col-span-2 ">
-            <div className="w-3/4 h-full mx-auto ">
+            <div className="w-2/3 h-full mx-auto ">
               <img
                 src="../bean/asia.png"
                 alt=""
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain "
               />
             </div>
           </div>

@@ -13,6 +13,7 @@ const HandcraftGeisha = ({ handcraftGeisha, sethandcraftGeisha }) => {
       }  duration-200 ease-linear `}
     >
       <ExitButton
+        detail
         onClick={() => sethandcraftGeisha(!handcraftGeisha)}
       ></ExitButton>
 

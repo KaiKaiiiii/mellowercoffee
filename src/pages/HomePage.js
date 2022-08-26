@@ -1,38 +1,49 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
+import Beans from "./Beans/Beans";
 
 const HomePage = () => {
-  const [cupLeft, setCupLeft] = useState(0);
-  const [america, setAmerica] = useState(false);
-  const [africa, setAfrica] = useState(false);
-  const [asia, setAsia] = useState(false);
+  const [cupLeft, setCupLeft] = useState(150);
+
+  const [cupMoved, setCupMoved] = useState(false);
   const [videoStopped, setVideoStopped] = useState(false);
+  const sliderRef = useRef(null);
+  const thumbRef = useRef(null);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    thumbRef.current.style.left = cupLeft + "px";
+  }, []);
 
   function onMouseDown(event) {
-    const slider = document.querySelector("#slider");
-    const thumb = document.querySelector(".thumb");
+    // const slider = document.querySelector("#slider");
+    // const thumb = document.querySelector(".thumb");
+    setCupMoved(true);
     event.preventDefault();
-    let shiftX = event.clientX - thumb.getBoundingClientRect().left;
-    console.log(thumb);
+    let shiftX = event.clientX - thumbRef.current.getBoundingClientRect().left;
 
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", onMouseUp);
     function onMouseMove(event) {
       let newLeft =
-        event.clientX - shiftX - slider.getBoundingClientRect().left;
+        event.clientX - shiftX - sliderRef.current.getBoundingClientRect().left;
 
-      // the pointer is out of slider => lock the thumb within the bounaries
+      // the pointer is out of sliderRef.current => lock the thumbRef.current within the bounaries
       if (newLeft < 0) {
         newLeft = 0;
       }
-      let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+      let rightEdge =
+        sliderRef.current.offsetWidth - thumbRef.current.offsetWidth;
       if (newLeft > rightEdge) {
         newLeft = rightEdge;
       }
 
       setCupLeft(newLeft);
-      thumb.style.left = newLeft + "px";
+      thumbRef.current.style.left = newLeft + "px";
     }
 
     function onMouseUp() {
@@ -52,7 +63,7 @@ const HomePage = () => {
             not only bitterness but also
           </p>
         </div>
-        <div className="relative w-full  flex items-center " id="slider">
+        <div className="relative w-full  flex items-center " ref={sliderRef}>
           <div className="upper-line w-full h-11 bg-upperLine absolute left-0 -translate-y-1/2"></div>
 
           <div className="under-line w-full   h-11 absolute left-0 -translate-y-1/2  "></div>
@@ -173,7 +184,8 @@ const HomePage = () => {
           ></div>
 
           <div
-            className="absolute left-0 h-24 bottom-0 -translate-y-1/4 cursor-grab flex justify-end thumb "
+            className="absolute left-0 h-24 bottom-0 -translate-y-1/4 cursor-grab flex justify-end items-end"
+            ref={thumbRef}
             //     onDragStart={(e) => setCupWidth(cupWidth + 0.1)}
             onMouseDown={onMouseDown}
           >
@@ -182,6 +194,17 @@ const HomePage = () => {
               alt=""
               className=" h-full object-contain"
             />
+            {!cupMoved ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#000"
+                height="48"
+                width="48"
+                className=" cup-move-arrow "
+              >
+                <path d="M23.45 39.4V10.6l-4.95 4.95-.75-.7L24 8.6l6.25 6.25-.75.7-4.95-4.95v28.8Z" />
+              </svg>
+            ) : null}
           </div>
         </div>
         <div className="text-center flex flex-col items-center">
@@ -204,66 +227,7 @@ const HomePage = () => {
         </p>
         <img src="/bean/plane.png" alt="" className="mt-16 mx-auto w-16" />
       </div>
-      <div className="bg-beanspage_bg  w-full h-full relative overflow-hidden">
-        <div className=" w-full h-full  translate-x-32">
-          <img
-            src={
-              america
-                ? "bean/mapame.png "
-                : africa
-                ? "bean/mapafrica.png "
-                : asia
-                ? "bean/mapasia.png "
-                : "bean/map.png "
-            }
-            alt=""
-            className="w-11/12 h-full  object-cover "
-          />
-        </div>
-        <Link to="beans/america">
-          <span
-            onMouseEnter={() => {
-              setAmerica(true);
-              setAfrica(false);
-              setAsia(false);
-            }}
-            className="absolute america translate-x-[38vw] -translate-y-[35vh] z-[1] font-medium tracking-tight uppercase underline 	underline-offset-4"
-          >
-            America
-          </span>
-        </Link>
-        <Link to="beans/africa">
-          <span
-            onMouseEnter={() => {
-              setAmerica(false);
-              setAfrica(true);
-              setAsia(false);
-            }}
-            className="absolute africa translate-x-[63vw] -translate-y-[20vh] z-[1] font-medium tracking-tight uppercase underline 	underline-offset-4"
-          >
-            Africa
-          </span>
-        </Link>
-        <Link to="beans/asia">
-          <span
-            onMouseEnter={() => {
-              setAmerica(false);
-              setAfrica(false);
-              setAsia(true);
-            }}
-            className="absolute asia translate-x-[83vw] -translate-y-[48vh] z-[1] font-medium tracking-tight uppercase underline 	underline-offset-4"
-          >
-            Asia
-          </span>
-        </Link>
-        <div className="w-auto absolute  -translate-y-[150%] ml-8">
-          <img
-            src="bean/bean.png"
-            alt=""
-            className="w-1/2 h-full object-cover"
-          />
-        </div>
-      </div>
+      <Beans noPlane></Beans>
       <div className="py-20">
         <div className="tracking-widest font-medium text-5xl text-center leading-6">
           <h2 className="">Enjoy fascinating coffee flavors</h2>

@@ -111,7 +111,7 @@ const Navigation = () => {
             type="text"
             name=""
             id=""
-            className="border-b-[1px] border-gray inline-block outline-none w-full"
+            className="border-b-[1px] border-gray inline-block outline-none w-full  selection:bg-nav_focus"
           />
         </li>
 
@@ -223,6 +223,21 @@ const Navigation = () => {
         handcraftEy={handcraftEy}
         sethandcraftEy={sethandcraftEy}
       ></HandcraftEy>
+      <OrderButton
+        none
+        setIceDripGeisha={setIceDripGeisha}
+        setIceDripAro={setIceDripAro}
+        setIceDripEy={setIceDripEy}
+        setIceDripColom={setIceDripColom}
+        setIceDripEthi={setIceDripEthi}
+        setIceDripSu={setIceDripSu}
+        sethandcraftGeisha={sethandcraftGeisha}
+        sethandcraftAro={sethandcraftAro}
+        sethandcraftEy={sethandcraftEy}
+        sethandcraftColom={sethandcraftColom}
+        sethandcraftEthi={sethandcraftEthi}
+        sethandcraftSu={sethandcraftSu}
+      ></OrderButton>
     </nav>
   );
 };

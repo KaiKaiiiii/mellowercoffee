@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const SumatraDetail = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <div className="bg-icedrip_bg w-full mt-100">
       <div className="mx-auto  w-full text-center py-16 uppercase">

@@ -1,12 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const OrderButton = ({ btnColor, content }) => {
-  if (!btnColor) {
+const OrderButton = ({
+  btnColor,
+  content,
+  none,
+  setIceDripGeisha,
+  iceDripGeisha,
+  setIceDripAro,
+  setIceDripEy,
+  setIceDripColom,
+  setIceDripEthi,
+  setIceDripSu,
+  sethandcraftGeisha,
+  sethandcraftAro,
+  sethandcraftEy,
+  sethandcraftColom,
+  sethandcraftEthi,
+  sethandcraftSu,
+}) => {
+  if (!btnColor && !none) {
     return (
       <button
         type="button"
-        className="bg-hover btn-shadow px-8 mt-4 py-3 text-white uppercase"
+        className="bg-hover btn-shadow px-8 mt-4 py-3 text-white uppercase "
       >
         {content ? content : "Order"}
       </button>
@@ -14,10 +31,16 @@ const OrderButton = ({ btnColor, content }) => {
   }
   if (btnColor === "geisha") {
     return (
-      <Link to="/beans/geisha">
+      <Link
+        to="/beans/geisha"
+        onClick={() => {
+          setIceDripGeisha(false);
+          sethandcraftGeisha(false);
+        }}
+      >
         <button
           type="button"
-          className="bg-geisha_btn btn-shadow px-8 mt-4 py-3 text-white uppercase"
+          className="bg-geisha_btn btn-shadow px-8 mt-4 py-3 text-white uppercase w-full"
         >
           {content ? content : "Order"}
         </button>
@@ -26,10 +49,16 @@ const OrderButton = ({ btnColor, content }) => {
   }
   if (btnColor === "aro") {
     return (
-      <Link to="/beans/aromatic">
+      <Link
+        to="/beans/aromatic"
+        onClick={() => {
+          setIceDripAro(false);
+          sethandcraftAro(false);
+        }}
+      >
         <button
           type="button"
-          className="bg-aro_btn btn-shadow px-8 mt-4 py-3 text-white uppercase"
+          className="bg-aro_btn btn-shadow px-8 mt-4 py-3 text-white uppercase w-full"
         >
           {content ? content : "Order"}
         </button>
@@ -38,10 +67,16 @@ const OrderButton = ({ btnColor, content }) => {
   }
   if (btnColor === "colom") {
     return (
-      <Link to="/beans/colombia">
+      <Link
+        to="/beans/colombia"
+        onClick={() => {
+          setIceDripColom(false);
+          sethandcraftColom(false);
+        }}
+      >
         <button
           type="button"
-          className="bg-colom_btn btn-shadow px-8 mt-4 py-3 text-white uppercase"
+          className="bg-colom_btn btn-shadow px-8 mt-4 py-3 text-white uppercase w-full"
         >
           {content ? content : "Order"}
         </button>
@@ -50,10 +85,16 @@ const OrderButton = ({ btnColor, content }) => {
   }
   if (btnColor === "ethi") {
     return (
-      <Link to="/beans/ethiopia">
+      <Link
+        to="/beans/ethiopia"
+        onClick={() => {
+          setIceDripEthi(false);
+          sethandcraftEthi(false);
+        }}
+      >
         <button
           type="button"
-          className="bg-ethi_btn btn-shadow px-8 mt-4 py-3 text-white uppercase"
+          className="bg-ethi_btn btn-shadow px-8 mt-4 py-3 text-white uppercase w-full"
         >
           {content ? content : "Order"}
         </button>
@@ -62,10 +103,16 @@ const OrderButton = ({ btnColor, content }) => {
   }
   if (btnColor === "su") {
     return (
-      <Link to="/beans/sumatra">
+      <Link
+        to="/beans/sumatra"
+        onClick={() => {
+          setIceDripSu(false);
+          sethandcraftSu(false);
+        }}
+      >
         <button
           type="button"
-          className="bg-su_btn btn-shadow px-8 mt-4 py-3 text-white uppercase"
+          className="bg-su_btn btn-shadow px-8 mt-4 py-3 text-white uppercase w-full"
         >
           {content ? content : "Order"}
         </button>
@@ -74,15 +121,24 @@ const OrderButton = ({ btnColor, content }) => {
   }
   if (btnColor === "ey") {
     return (
-      <Link to="/beans/eyunnan">
+      <Link
+        to="/beans/eyunnan"
+        onClick={() => {
+          setIceDripEy(false);
+          sethandcraftEy(false);
+        }}
+      >
         <button
           type="button"
-          className="bg-ey_btn btn-shadow px-8 mt-4 py-3 text-white uppercase"
+          className="bg-ey_btn btn-shadow px-8 mt-4 py-3 text-white uppercase w-full"
         >
           {content ? content : "Order"}
         </button>
       </Link>
     );
+  }
+  if (none) {
+    return <></>;
   }
 };
 
