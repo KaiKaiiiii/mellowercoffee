@@ -119,6 +119,7 @@ module.exports = {
         homePage_note_13: "#C74A50",
         homePage_note_14: "#DF6330",
         homePage_note_15: "#F6A139",
+        nav_focus: "#FFCEAE",
       },
     },
   },
