@@ -49,9 +49,12 @@ const America = () => {
           </div>
           <div
             className="col-span-1 cursor-pointer"
-            onClick={() => {
-              setGeishaCard(!geishaCard);
+            onMouseEnter={() => {
+              setGeishaCard(true);
               setColomCard(false);
+            }}
+            onMouseLeave={() => {
+              setGeishaCard(false);
             }}
           >
             {!geishaCard ? (
@@ -72,9 +75,12 @@ const America = () => {
           </div>
           <div
             className="col-span-1 cursor-pointer"
-            onClick={() => {
-              setColomCard(!colomCard);
+            onMouseEnter={() => {
+              setColomCard(true);
               setGeishaCard(false);
+            }}
+            onMouseLeave={() => {
+              setColomCard(false);
             }}
           >
             {!colomCard ? (

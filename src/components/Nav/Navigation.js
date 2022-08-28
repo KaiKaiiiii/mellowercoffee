@@ -354,7 +354,7 @@ const Signature = ({ signature, setSignature }) => {
             />
           </div>
           <div className="z-10 flex flex-col items-center justify-center">
-            <div className="w-72  ">
+            <div className="w-[calc(100%-80px)]  ">
               <img
                 src="/Beverages/mangote 2.png"
                 alt=""

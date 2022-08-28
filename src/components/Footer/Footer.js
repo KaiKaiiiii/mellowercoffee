@@ -1,28 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="relative bottom-0 left-0 right-0 border-t-2 border-gray h-[200px]">
       <ul className="flex h-full ">
         <li className="px-7 flex flex-col justify-center   ">
-          <img
-            src="/SVG_ICON/logoM.svg"
-            alt=""
-            className="w-[117px] h-auto cursor-pointer"
-          />
+          <Link to="/">
+            <img
+              src="/SVG_ICON/logoM.svg"
+              alt=""
+              className="w-[117px] mb-4 h-auto cursor-pointer"
+            />
+          </Link>
           <p>©2022 MELLOWER COFFEE HCM CO., LTD. </p>
           <p>All rights reserved</p>
         </li>
         <li className="flex flex-col  items-center justify-center">
           <a
-            href=""
-            className="flex items-center justify-center block w-full h-full px-7 "
+            href="https://www.facebook.com/MellowerCoffeeHCM/"
+            className="flex items-center justify-center  w-full h-full px-7 "
           >
             <img src="/SVG_ICON/fb.png" alt="" className="w-[34px] h-auto" />
           </a>
           <a
-            href=""
-            className="flex items-center justify-center block w-full h-full border-t-2 border-gray px-7 "
+            href="https://www.instagram.com/mellowercoffee_vn/"
+            className="flex items-center justify-center  w-full h-full border-t-2 border-gray px-7 "
           >
             <img src="/SVG_ICON/ins.png" alt="" className="w-[34px] h-auto" />
           </a>

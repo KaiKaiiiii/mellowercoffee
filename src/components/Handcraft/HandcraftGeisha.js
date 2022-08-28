@@ -29,7 +29,7 @@ const HandcraftGeisha = ({ handcraftGeisha, sethandcraftGeisha }) => {
           </h2>
           <div className="grid grid-cols-3 mt-[-80px] pt-20 h-full">
             <div
-              className={`bg-icedrip_bg relative flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg relative flex px-7  flex-col items-center justify-end pb-20 border-2 border-l-0  border-gray `}
             >
               <div className="absolute top-16 left-7 z-10 ">
                 <div className="bg-babycino py-2 px-3 text-center absolute left-8 icedrip-tooltip">
@@ -57,7 +57,7 @@ const HandcraftGeisha = ({ handcraftGeisha, sethandcraftGeisha }) => {
               <OrderButton btnColor="geisha"></OrderButton>
             </div>
             <div
-              className={`bg-icedrip_bg relative flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg relative flex px-7  flex-col items-center justify-end pb-20 border-2 border-l-0  border-gray `}
             >
               <div className="w-52 ">
                 <div className="absolute top-16 left-7 z-10 ">
@@ -85,7 +85,7 @@ const HandcraftGeisha = ({ handcraftGeisha, sethandcraftGeisha }) => {
               <OrderButton btnColor="geisha"></OrderButton>
             </div>
             <div
-              className={`bg-icedrip_bg relative flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg relative flex px-7  flex-col items-center justify-end pb-20 border-2 border-l-0  border-gray `}
             >
               <div className="w-52 ">
                 <div className="absolute top-16 left-7 z-10 ">

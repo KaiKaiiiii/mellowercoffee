@@ -46,9 +46,12 @@ const Africa = () => {
           </div>
           <div
             className="col-span-1 cursor-pointer"
-            onClick={() => {
-              setAroCard(!aroCard);
+            onMouseEnter={() => {
+              setAroCard(true);
               setEthiCard(false);
+            }}
+            onMouseLeave={() => {
+              setAroCard(false);
             }}
           >
             {!aroCard ? (
@@ -69,9 +72,12 @@ const Africa = () => {
           </div>
           <div
             className="col-span-1 cursor-pointer"
-            onClick={() => {
-              setEthiCard(!ethiCard);
+            onMouseEnter={() => {
+              setEthiCard(true);
               setAroCard(false);
+            }}
+            onMouseLeave={() => {
+              setEthiCard(false);
             }}
           >
             {!ethiCard ? (

@@ -47,9 +47,12 @@ const Asia = () => {
           </div>
           <div
             className="col-span-1 cursor-pointer"
-            onClick={() => {
-              setEyCard(!eyCard);
+            onMouseEnter={() => {
+              setEyCard(true);
               setSuCard(false);
+            }}
+            onMouseLeave={() => {
+              setEyCard(false);
             }}
           >
             {!eyCard ? (
@@ -70,9 +73,12 @@ const Asia = () => {
           </div>
           <div
             className="col-span-1 cursor-pointer"
-            onClick={() => {
-              setSuCard(!suCard);
+            onMouseEnter={() => {
+              setSuCard(true);
               setEyCard(false);
+            }}
+            onMouseLeave={() => {
+              setSuCard(false);
             }}
           >
             {!suCard ? (

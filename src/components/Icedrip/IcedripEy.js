@@ -45,9 +45,9 @@ const IcedripEy = ({ iceDripEy, setIceDripEy }) => {
               </div>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-12 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-center pb-14 border-2 border-l-0  border-gray `}
             >
-              <div className="w-80 ">
+              <div className="w-52 ">
                 <img
                   src="/Beverages/icedrip_black.png"
                   alt=""
@@ -61,7 +61,7 @@ const IcedripEy = ({ iceDripEy, setIceDripEy }) => {
               <OrderButton btnColor="ey"></OrderButton>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-12 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-center pb-14 border-2 border-l-0  border-gray `}
             >
               <div className="w-52 ">
                 <img
@@ -77,7 +77,7 @@ const IcedripEy = ({ iceDripEy, setIceDripEy }) => {
               <OrderButton btnColor="ey"></OrderButton>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-12 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-center pb-14 border-2 border-l-0  border-gray `}
             >
               <div className="w-52 ">
                 <img

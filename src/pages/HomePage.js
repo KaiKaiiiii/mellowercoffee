@@ -214,7 +214,7 @@ const HomePage = () => {
           <img src="/SVG_ICON/arrowblack.png" alt="" className="w-8 mt-4" />
         </div>
       </div>
-      <div className="py-20">
+      <div className="py-20 overflow-hidden">
         <div className="tracking-widest font-medium text-5xl text-center leading-6">
           <h2 className="">The growing region</h2>
           <br />
@@ -225,7 +225,11 @@ const HomePage = () => {
         <p className="text-2xl font-medium mt-10 tracking-widest text-center">
           choose the origin you want to visit
         </p>
-        <img src="/bean/plane.png" alt="" className="mt-16 mx-auto w-16" />
+        <img
+          src="/bean/plane.png"
+          alt=""
+          className="mt-16 mx-auto w-16 home-page_plane"
+        />
       </div>
       <Beans noPlane></Beans>
       <div className="py-20">

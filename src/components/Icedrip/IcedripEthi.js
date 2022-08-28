@@ -12,7 +12,10 @@ const IcedripEthi = ({ iceDripEthi, setIceDripEthi }) => {
           : "translate-x-full hidden invisible"
       }  duration-200 ease-linear `}
     >
-      <ExitButton detail onClick={() => setIceDripEthi(!iceDripEthi)}></ExitButton>
+      <ExitButton
+        detail
+        onClick={() => setIceDripEthi(!iceDripEthi)}
+      ></ExitButton>
 
       <div className=" border-2 border-gray  flex items-baseline pt-44 justify-center  border-t-0 border-r-2 border-l-0">
         <span className=" -rotate-90 uppercase  text-3xl tracking-widest max-w-[150px]  ">
@@ -45,9 +48,9 @@ const IcedripEthi = ({ iceDripEthi, setIceDripEthi }) => {
               </div>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-center pb-14 border-2 border-l-0  border-gray `}
             >
-              <div className="w-80 ">
+              <div className="w-52 ">
                 <img
                   src="/Beverages/icedrip_black.png"
                   alt=""
@@ -61,7 +64,7 @@ const IcedripEthi = ({ iceDripEthi, setIceDripEthi }) => {
               <OrderButton btnColor="ethi"></OrderButton>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-center pb-14 border-2 border-l-0  border-gray `}
             >
               <div className="w-52 ">
                 <img
@@ -77,7 +80,7 @@ const IcedripEthi = ({ iceDripEthi, setIceDripEthi }) => {
               <OrderButton btnColor="ethi"></OrderButton>
             </div>
             <div
-              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-end py-14 border-2 border-l-0  border-gray `}
+              className={`bg-icedrip_bg  flex px-7  flex-col items-center justify-center pb-14 border-2 border-l-0  border-gray `}
             >
               <div className="w-52 ">
                 <img
