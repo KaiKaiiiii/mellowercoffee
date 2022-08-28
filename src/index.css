@@ -322,17 +322,6 @@ footer li:last-child,
   }
 }
 
-@keyframes cup-move {
-  0% {
-    opacity: 1;
-    transform: rotate(90deg) translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(90deg) translateY(-200%);
-  }
-}
-
 .home-page_plane {
   animation: plane 5s linear infinite;
 }

@@ -1,21 +1,21 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Provider } from "react-redux";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Beans from "./pages/Beans/Beans";
-import Africa from "./pages/Beans/Africa";
-import America from "./pages/Beans/America";
-import Asia from "./pages/Beans/Asia";
-import GeishaDetail from "./pages/Beans/GeishaDetail";
-import AromaticDetail from "./pages/Beans/AromaticDetail";
-import EYunnanDetail from "./pages/Beans/EYunnanDetail";
-import ColombiaDetail from "./pages/Beans/ColombiaDetail";
-import SumatraDetail from "./pages/Beans/SumatraDetail";
-import EthiopiaDetail from "./pages/Beans/EthiopiaDetail";
-import HomePage from "./pages/HomePage";
+
+const Beans = React.lazy(() => import("./pages/Beans/Beans"));
+const Africa = React.lazy(() => import("./pages/Beans/Africa"));
+const America = React.lazy(() => import("./pages/Beans/America"));
+const Asia = React.lazy(() => import("./pages/Beans/Asia"));
+const HomePage = React.lazy(() => import("./pages/HomePage"));
+const GeishaDetail = React.lazy(() => import("./pages/Beans/GeishaDetail"));
+const AromaticDetail = React.lazy(() => import("./pages/Beans/AromaticDetail"));
+const EYunnanDetail = React.lazy(() => import("./pages/Beans/EYunnanDetail"));
+const ColombiaDetail = React.lazy(() => import("./pages/Beans/ColombiaDetail"));
+const EthiopiaDetail = React.lazy(() => import("./pages/Beans/EthiopiaDetail"));
+const SumatraDetail = React.lazy(() => import("./pages/Beans/SumatraDetail"));
 
 const container = document.getElementById("root");
 const root = createRoot(container);
