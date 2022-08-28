@@ -4,6 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LoadingPage from "./pages/LoadingPage";
 
 const Beans = React.lazy(() => import("./pages/Beans/Beans"));
 const Africa = React.lazy(() => import("./pages/Beans/Africa"));
@@ -21,7 +22,7 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
-  <Suspense fallback={<div>Loading..</div>}>
+  <Suspense fallback={<LoadingPage></LoadingPage>}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App></App>}>
