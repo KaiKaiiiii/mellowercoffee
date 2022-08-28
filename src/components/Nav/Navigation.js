@@ -345,7 +345,7 @@ const Signature = ({ signature, setSignature }) => {
         <h2 className="uppercase tracking-widest text-center py-6 text-2xl border-t-0   border-gray ">
           seasonal beverages
         </h2>
-        <div className="flex  justify-center py-16 items-center max-h-[540px]   relative">
+        <div className="flex  justify-center py-16 items-center max-h-[540px] h-full  relative">
           <div className="absolute z-0 w-full h-full border-t-2 border-b-2 border-gray">
             <img
               src="/Beverages/bg-gradient.png"
