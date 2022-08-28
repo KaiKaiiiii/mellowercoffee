@@ -295,7 +295,31 @@ footer li:last-child,
 }
 
 .cup-move-arrow {
-  animation: cup-move 1000ms linear infinite;
+  animation: cup-move-arrow 1000ms linear infinite;
+}
+
+@keyframes cup-move-arrow {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: rotate(90deg) translateY(-50%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(90deg) translateY(-100%);
+  }
+  75% {
+    opacity: 1;
+    transform: rotate(90deg) translateY(-150%);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(90deg) translateY(-200%);
+  }
 }
 
 @keyframes cup-move {
