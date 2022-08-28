@@ -844,7 +844,7 @@ const Traditional = ({ traditional, setTraditional }) => {
           <div
             className={`bg-bacXiu grow py-[50px] flex flex-col items-center justify-end py-14 border-2 border-b-0 border-l-0 border-gray `}
           >
-            <div className="w-24 ">
+            <div className="w-52 ">
               <img
                 src="/Beverages/bacxiu.png"
                 alt=""
