@@ -22,17 +22,17 @@ const America = () => {
       <div className="bg-icedrip_bg w-full h-full  p-20 mx-auto">
         <ul className="flex items-center gap-7">
           <NavLink to="/beans/america">
-            <li className="font-medium active tracking-tight uppercase underline text-xl 	underline-offset-4 text-gray88 ">
+            <li className="font-medium america-active tracking-tight uppercase underline text-xl 	underline-offset-4 text-gray88 ">
               America
             </li>
           </NavLink>
           <NavLink to="/beans/africa">
-            <li className="font-medium tracking-tight uppercase underline text-xl 	underline-offset-4 text-gray88">
+            <li className="font-medium tracking-tight uppercase underline text-xl hover:text-[#ffe39b]	underline-offset-4 text-gray88">
               Africa
             </li>
           </NavLink>
           <NavLink to="/beans/asia">
-            <li className="font-medium tracking-tight uppercase underline  text-xl	underline-offset-4 text-gray88">
+            <li className="font-medium tracking-tight uppercase underline  text-xl hover:text-[#b1805e]	underline-offset-4 text-gray88">
               Asia
             </li>
           </NavLink>

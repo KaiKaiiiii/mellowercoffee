@@ -19,8 +19,7 @@ const LoadingPage = () => {
           />
         </div>
       </div>
-      <h2 className="text-xl font-bold">MELLOWER COFFEE </h2>
-      <p className="font-medium">enjoy time is filling </p>
+      <h2 className="text-xl font-bold">LOADING... </h2>
     </div>
   );
 };

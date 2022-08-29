@@ -3,7 +3,7 @@ import OrderButton from "../Button/OrderButton";
 
 const EyDetailCard = () => {
   return (
-    <div className=" col-span-1 text-white flex flex-col relative  border-gray ">
+    <div className=" col-span-1 text-white flex flex-col relative h-full  border-gray ">
       <div className="absolute inset-0  bg-gradient-to-b from-ey_gradient_1 to-ey_gradient_2 z-0"></div>
       <div className="grow pt-8 pb-12 px-5 text-lg flex flex-col  z-10">
         <h2 className="uppercase text-3xl  font-bold pb-3 border-b-2 border-white">

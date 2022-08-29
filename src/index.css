@@ -219,8 +219,14 @@ footer li:last-child,
   margin-top: 100px;
 }
 
-.bean-map .active {
-  color: #000;
+.africa-active {
+  color: #ffe39b;
+}
+.america-active {
+  color: #df6330;
+}
+.asia-active {
+  color: #b1805e;
 }
 
 .detail-roast-level li {
